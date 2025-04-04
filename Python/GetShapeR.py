@@ -17,12 +17,9 @@ from scipy import linalg
 
 ##### INPUT VALUES #####
 # Shape model (OBJ) file:
-modelname = '98KY26/model01.obj'  
-# Size: a0 is the longest axis dimension. Use 0 to not scale the model size.
-a0 = 14.0 
-# If you want to keep the shape model's axis ratios, use b0, c0 = 0, 0, 
-# or scale all axes by providing the intermediate and short axis dimensions
-b0, c0 = 0, 0
+modelname = 'shapemodel.obj'  
+a0 = 14.0       # Size: a0 is the longest axis dimension. Use 0 to not scale the model size.
+b0, c0 = 0, 0   # Intermediate and short axis dimensions. Use 0 to not scale the model size.
 # Give either the subradar latitude or the set of observer and polar ecliptic coordinates 
 # (make delta False for the latter! Note: 0 = False so use e.g. 0.01 for an equatorial view!)
 delta = 0					# subradar latitude ([-90,90])
@@ -33,7 +30,7 @@ PoleEcLon = 35.6 #45				# Pole ecliptic longitude in degrees
 x0 = 10 						# Map dimension (number of pixels per side)
 law = 'Cos'						# Scattering law: 'Cos'/'Hag' for Cosine/Hagfors
 C = 0.77 						# scattering law parameter (roughness)
-rcs_obs = 25					# The expected radar albedo
+rcs_obs = 25					# The observed radar cross section
 step_ang = 45					# Angle interval (e.g., 90 for 4 orientations)
 P = 321.1                         # Rotation period in seconds
 wl = 0.035                      # Observation wavelength
